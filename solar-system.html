@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .solar-system {
+      position: relative;
+      width: 800px;
+      height: 800px;
+      margin: 0 auto;
+    }
+
+    .sun, .earth, .mars, .jupiter {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+    .sun {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+    }
+
+    .earth {
+      width: 10px;
+      height: 10px;
+      background-color: blue;
+      animation: orbit-earth 12s infinite linear;
+      transform: translate(-50%, -50%) rotate(0deg) translate(200px) rotate(0deg);
+    }
+
+    .mars {
+      width: 8px;
+      height: 8px;
+      background-color: brown; /* Changed color to brown */
+      animation: orbit-mars 24s infinite linear;
+      transform: translate(-50%, -50%) rotate(0deg) translate(250px) rotate(0deg);
+    }
+
+    .jupiter {
+  width: 20px;
+  height: 20px;
+  background-color: tan; /* Changed color to tan */
+  animation: orbit-jupiter 60s infinite linear;
+  transform: translate(-50%, -50%) rotate(0deg) translate(350px) rotate(0deg);
+}
+
+    @keyframes orbit-earth {
+      0% { transform: translate(-50%, -50%) rotate(0deg) translateX(200px) scaleY(1) rotate(0deg); }
+      50% { transform: translate(-50%, -50%) rotate(180deg) translateX(200px) scaleY(0.9) rotate(-180deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg) translateX(200px) scaleY(1) rotate(-360deg); }
+    }
+
+    @keyframes orbit-mars {
+      0% { transform: translate(-50%, -50%) rotate(0deg) translateX(250px) scaleY(1) rotate(0deg); }
+      50% { transform: translate(-50%, -50%) rotate(180deg) translateX(250px) scaleY(0.9) rotate(-180deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg) translateX(250px) scaleY(1) rotate(-360deg); }
+    }
+
+    @keyframes orbit-jupiter {
+      0% { transform: translate(-50%, -50%) rotate(0deg) translateX(350px) scaleY(1) rotate(0deg); }
+      50% { transform: translate(-50%, -50%) rotate(180deg) translateX(350px) scaleY(0.9) rotate(-180deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg) translateX(350px) scaleY(1) rotate(-360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="solar-system">
+    <div class="sun"></div>
+    <div class="earth"></div>
+    <div class="mars"></div>
+    <div class="jupiter"></div>
+  </div>
+</body>
+</html>
